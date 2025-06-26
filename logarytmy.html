@@ -2,41 +2,113 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Logarytmy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logarytmy – Tablice Matematyczne</title>
   <link rel="stylesheet" href="globals.css">
+  <style>
+    body { background-color: #121212; color: #eee; font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+    h1, h2 { color: #00bfff; }
+    .box { background-color: #1e1e1e; border-left: 4px solid #00bfff; padding: 15px; margin-bottom: 20px; border-radius: 8px; }
+    .formula { font-size: 1.2em; font-weight: bold; color: #ffd700; }
+    .important { background-color: #333; border-left: 4px solid orange; padding: 10px; margin: 10px 0; border-radius: 6px; }
+    .quiz { background-color: #222; padding: 20px; border-radius: 8px; margin-top: 30px; }
+    .quiz input[type="radio"] { margin-right: 10px; }
+    .quiz label { display: block; margin-bottom: 10px; }
+    .quiz button { margin-top: 10px; padding: 10px; background-color: #00bfff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .result { margin-top: 10px; font-weight: bold; }
+    a { color: #00bfff; }
+  </style>
 </head>
 <body>
-  <h1>Logarytmy</h1>
 
-  <h2>📘 Definicja</h2>
-  <p><strong>log<sub>a</sub>(b) = c</strong> &harr; <strong>a<sup>c</sup> = b</strong></p>
-  <p>Gdzie: <em>a &gt; 0, a ≠ 1, b &gt; 0</em></p>
+  <h1>📘 Logarytmy</h1>
 
-  <h2>🧠 Własności logarytmów</h2>
-  <ul>
-    <li><strong>log<sub>a</sub>(MN) = log<sub>a</sub>(M) + log<sub>a</sub>(N)</strong></li>
-    <li><strong>log<sub>a</sub>(M/N) = log<sub>a</sub>(M) - log<sub>a</sub>(N)</strong></li>
-    <li><strong>log<sub>a</sub>(M<sup>k</sup>) = k · log<sub>a</sub>(M)</strong></li>
-    <li><strong>log<sub>a</sub>(a) = 1</strong>, &nbsp; <strong>log<sub>a</sub>(1) = 0</strong></li>
-    <li><strong>Zmiana podstawy:</strong> log<sub>a</sub>(b) = log<sub>c</sub>(b) / log<sub>c</sub>(a)</li>
-  </ul>
+  <div class="box">
+    <h2>Definicja</h2>
+    <div class="formula">log<sub>a</sub>(b) = c &harr; a<sup>c</sup> = b</div>
+    <p class="important">Przykład: log<sub>2</sub>(8) = 3, bo 2<sup>3</sup> = 8</p>
+  </div>
 
-  <h2>🛠️ Zastosowanie</h2>
-  <p>Logarytmy pojawiają się na maturze przy rozwiązywaniu równań, upraszczaniu wyrażeń oraz w zadaniach z wykładniczością.</p>
+  <div class="box">
+    <h2>Wzory</h2>
+    <p class="formula">log<sub>a</sub>(MN) = log<sub>a</sub>(M) + log<sub>a</sub>(N)</p>
+    <p>Logarytm z iloczynu to suma logarytmów – używamy, gdy mnożysz liczby w logarytmie.</p>
 
-  <h2>📌 Przykładowe zadanie</h2>
-  <p>Oblicz: <strong>log<sub>2</sub>(8)</strong></p>
-  <p>Rozwiązanie: <strong>2<sup>3</sup> = 8</strong>, więc <strong>log<sub>2</sub>(8) = 3</strong></p>
+    <p class="formula">log<sub>a</sub>(M/N) = log<sub>a</sub>(M) - log<sub>a</sub>(N)</p>
+    <p>Logarytm z ilorazu to różnica logarytmów – gdy dzielisz liczby w logarytmie.</p>
 
-  <h2>📝 Zadania z matury</h2>
-  <ul>
-    <li>Matura 2021: Oblicz <strong>log<sub>3</sub>(1/9)</strong> → Odp: -2</li>
-    <li>Matura 2018: Dla jakiego x: <strong>log<sub>5</sub>(x) = 2</strong> → x = 25</li>
-    <li>Matura 2016: Oblicz <strong>log<sub>4</sub>(64)</strong> → Odp: 3</li>
-  </ul>
+    <p class="formula">log<sub>a</sub>(M<sup>k</sup>) = k · log<sub>a</sub>(M)</p>
+    <p>Potęga „spada” przed logarytm – bardzo przydatne przy równaniach.</p>
 
-  <br><a href="index.html">⬅ Wróć do spisu</a>
+    <p class="formula">log<sub>a</sub>(a) = 1</p>
+    <p>Zawsze 1, bo a<sup>1</sup> = a</p>
+
+    <p class="formula">log<sub>a</sub>(1) = 0</p>
+    <p>Zawsze 0, bo a<sup>0</sup> = 1</p>
+  </div>
+
+  <div class="box">
+    <h2>Zastosowanie</h2>
+    <p>Logarytmy przydają się do przekształcania wyrażeń, rozwiązywania równań wykładniczych oraz w zadaniach z funkcją wykładniczą.</p>
+  </div>
+
+  <div class="box">
+    <h2>Przykładowe zadanie z rozwiązaniem</h2>
+    <p><strong>Zadanie:</strong> Oblicz log<sub>3</sub>(1/27)</p>
+    <p><strong>Krok 1:</strong> Zapisz 1/27 jako potęgę 3 → 1/27 = 3<sup>-3</sup></p>
+    <p><strong>Krok 2:</strong> log<sub>3</sub>(3<sup>-3</sup>) = -3</p>
+    <p class="important">Odpowiedź: -3 (bo potęga weszła „przed” logarytm)</p>
+  </div>
+
+  <div class="box">
+    <h2>Zadania z matury</h2>
+    <ul>
+      <li>Matura 2021: Oblicz log<sub>3</sub>(1/9) → Odp: -2</li>
+      <li>Matura 2018: log<sub>5</sub>(x) = 2 → x = 25</li>
+      <li>Matura 2016: log<sub>4</sub>(64) → Odp: 3</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>📌 Zapamiętaj</h2>
+    <ul>
+      <li>log<sub>a</sub>(1) = 0</li>
+      <li>log<sub>a</sub>(a) = 1</li>
+      <li>Nie logarytmujemy liczb ≤ 0</li>
+    </ul>
+  </div>
+
+  <div class="quiz">
+    <h2>🎯 Quiz – sprawdź się!</h2>
+    <form id="quizForm">
+      <p><strong>1. Ile wynosi log<sub>2</sub>(16)?</strong></p>
+      <label><input type="radio" name="q1" value="a"> 3</label>
+      <label><input type="radio" name="q1" value="b"> 4</label>
+      <label><input type="radio" name="q1" value="c"> 5</label>
+
+      <p><strong>2. log<sub>5</sub>(1/25) =</strong></p>
+      <label><input type="radio" name="q2" value="a"> -2</label>
+      <label><input type="radio" name="q2" value="b"> 2</label>
+      <label><input type="radio" name="q2" value="c"> 1/2</label>
+
+      <button type="button" onclick="checkAnswers()">Sprawdź odpowiedzi</button>
+      <div id="result" class="result"></div>
+    </form>
+  </div>
+
+  <br><a href="index.html">⬅ Wróć do spisu treści</a>
+
+  <script>
+    function checkAnswers() {
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      let score = 0;
+      if (q1 && q1.value === "b") score++;
+      if (q2 && q2.value === "a") score++;
+      document.getElementById("result").innerText = "Twój wynik: " + score + "/2";
+    }
+  </script>
+
 </body>
 </html>
